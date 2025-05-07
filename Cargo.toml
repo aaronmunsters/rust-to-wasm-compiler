@@ -4,18 +4,18 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-cargo = "0.87.1"
-thiserror = "2"
-tempfile = "3.19"
-dirs = "6.0"
-sha256 = "1.6.0"
+cargo = { version = "0.87.1" }
+thiserror = { version = "2" }
+tempfile = { version = "3.19" }
+dirs = { version = "6.0" }
+sha256 = { version = "1.6.0" }
 
 [dev-dependencies]
-tempfile = "3.19"
-thiserror = "2"
+tempfile = { version = "3.19" }
+thiserror = { version = "2" }
 serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
-wat = "1"
-wasmtime = "32.0"
-rayon = "1.10"
-indoc = "2"
+serde_json = { version = "1.0" }
+wat = { version = "1" }
+wasmtime = { version = "32.0" }
+rayon = { version = "1.10" }
+indoc = { version = "2" }
