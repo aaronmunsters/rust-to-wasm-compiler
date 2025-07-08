@@ -114,7 +114,7 @@ impl RustToWasmCompiler {
     ) -> Result<Vec<u8>, CompilationError> {
         let cache_dir: PathBuf = cache_dir().map(Ok).unwrap_or_else(|| {
             tempfile::TempDir::new()
-                .map(TempDir::into_path)
+                .map(TempDir::keep)
                 .map_err(CompilationError::CreateTempWorkingDir)
         })?;
 
