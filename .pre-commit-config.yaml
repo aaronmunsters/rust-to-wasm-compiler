@@ -1,0 +1,49 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0  # this is optional, use `pre-commit autoupdate` to get the latest rev!
+    hooks:
+    -   id: check-ast
+    -   id: check-builtin-literals
+    -   id: check-docstring-first
+    -   id: check-executables-have-shebangs
+    -   id: check-symlinks
+    -   id: debug-statements
+    -   id: double-quote-string-fixer
+    -   id: fix-encoding-pragma
+    -   id: requirements-txt-fixer
+    -   id: check-added-large-files
+    -   id: check-case-conflict
+    -   id: check-json
+    -   id: check-merge-conflict
+    -   id: check-toml
+    -   id: check-vcs-permalinks
+    -   id: check-yaml
+    -   id: destroyed-symlinks
+    -   id: detect-private-key
+    -   id: end-of-file-fixer
+    -   id: fix-byte-order-marker
+    -   id: mixed-line-ending
+    -   id: pretty-format-json
+        args: [--autofix]
+    -   id: trailing-whitespace
+
+    # Error; 'not found in repo'
+    # -   id: check-illegal-windows-names
+    #
+    # Has false-positive for .rs files `#![nostd]`
+    # -   id: check-shebang-scripts-are-executable
+    #
+    # Unused:
+    # -   id: forbid-new-submodules
+    # -   id: file-contents-sorter
+    # -   id: no-commit-to-branch
+    # -   id: forbid-submodules
+    # -   id: sort-simple-yaml
+    # -   id: name-tests-test
+    # -   id: check-xml
+-   repo: https://github.com/doublify/pre-commit-rust
+    rev: v1.0
+    hooks:
+    -   id: fmt
+    -   id: cargo-check
+    -   id: clippy
