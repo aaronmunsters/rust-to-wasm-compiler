@@ -52,7 +52,7 @@ fn compiles_example() {
             .unwrap();
 
         assert_eq!(results[0].i32().unwrap(), 89);
-    })
+    });
 }
 
 #[test]
