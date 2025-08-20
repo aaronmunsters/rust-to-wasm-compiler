@@ -55,7 +55,7 @@ impl RustToWasmCompiler {
 
         // Start with default compile options, orienting for a build mode
         let mut compile_options =
-            CompileOptions::new(&self.gctx, cargo::core::compiler::CompileMode::Build)
+            CompileOptions::new(&self.gctx, cargo::core::compiler::UserIntent::Build)
                 .map_err(Into::into)
                 .map_err(CompilationError::CompileOptionsCreationFailed)?;
 
