@@ -8,18 +8,18 @@ default = []
 debug-working-directory = []
 
 [dependencies]
-cargo = { version = "0.90.0" }
+cargo = { version = "0.91.0" }
 thiserror = { version = "2" }
-tempfile = { version = "3.20" }
+tempfile = { version = "3.23" }
 dirs = { version = "6.0" }
 sha256 = { version = "1.6.0" }
 
 [dev-dependencies]
-tempfile = { version = "3.19" }
+tempfile = { version = "3.23" }
 thiserror = { version = "2" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = { version = "1.0" }
 wat = { version = "1" }
-wasmtime = { version = "35.0" }
-rayon = { version = "1.10" }
+wasmtime = { version = "37.0" }
+rayon = { version = "1.11" }
 indoc = { version = "2" }
