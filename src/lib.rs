@@ -125,6 +125,7 @@ impl RustToWasmCompiler {
             .join(digest(manifest))
             .join(digest(lib));
 
+        #[cfg(feature = "debug-working-directory")]
         dbg!(&working_dir);
 
         std::fs::create_dir_all(&working_dir).map_err(CompilationError::CreateTempWorkingDir)?;
