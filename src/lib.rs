@@ -36,7 +36,30 @@ impl RustToWasmCompiler {
     /// # Errors
     /// When creating a default global context fails
     pub fn new() -> Result<Self, CompilerSetupError> {
-        let gctx = GlobalContext::default().map_err(CompilerSetupError::from)?;
+        let mut gctx = GlobalContext::default().map_err(CompilerSetupError::from)?;
+
+        let verbose = 0;
+        let quiet = true;
+        let color = None;
+        let frozen = false;
+        let locked = false;
+        let offline = false;
+        let target_dir = &None;
+        let cli_config = &[];
+        let unstable_flags = &[];
+
+        gctx.configure(
+            verbose,
+            quiet,
+            color,
+            frozen,
+            locked,
+            offline,
+            target_dir,
+            unstable_flags,
+            cli_config,
+        )?;
+
         Ok(Self { gctx })
     }
 
